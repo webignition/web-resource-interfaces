@@ -5,7 +5,7 @@ namespace webignition\WebResourceInterfaces;
 /**
  * Models a web page
  */
-interface WebPage extends WebResourceInterface
+interface WebPageInterface extends WebResourceInterface
 {
     /**
      * Returns, in order of preference, first found to be valid of:

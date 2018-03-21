@@ -44,7 +44,7 @@ interface WebResourceInterface
      *
      * @param UriInterface $uri
      *
-     * @return ResponseInterface
+     * @return WebResourceInterface
      */
     public function setUri(UriInterface $uri);
 

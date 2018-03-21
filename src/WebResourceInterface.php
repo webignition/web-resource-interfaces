@@ -77,9 +77,16 @@ interface WebResourceInterface
     public function setBody(StreamInterface $body);
 
     /**
-     * Gets the body of the resource
+     * Gets the body of the resource.
      *
      * @return StreamInterface|null
      */
     public function getBody();
+
+    /**
+     * Gets the content of the body of the resource.
+     *
+     * @return string
+     */
+    public function getContent();
 }

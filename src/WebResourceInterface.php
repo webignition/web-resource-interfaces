@@ -97,5 +97,5 @@ interface WebResourceInterface
      *
      * @return bool
      */
-    public function models($contentTypeSubtypeString);
+    public static function models($contentTypeSubtypeString);
 }

@@ -89,4 +89,13 @@ interface WebResourceInterface
      * @return string
      */
     public function getContent();
+
+    /**
+     * Does this instance provide a model for a given type/subtype string?
+     *
+     * @param string $contentTypeSubtypeString
+     *
+     * @return bool
+     */
+    public function models($contentTypeSubtypeString);
 }

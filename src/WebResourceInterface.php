@@ -91,11 +91,11 @@ interface WebResourceInterface
     public function getContent();
 
     /**
-     * Does this instance provide a model for a given type/subtype string?
+     * Does this instance provide a model for a given internet media type?
      *
-     * @param string $contentTypeSubtypeString
+     * @param InternetMediaTypeInterface $mediaType
      *
      * @return bool
      */
-    public static function models($contentTypeSubtypeString);
+    public static function models(InternetMediaTypeInterface $mediaType);
 }

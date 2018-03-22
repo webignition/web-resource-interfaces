@@ -6,10 +6,6 @@ use Psr\Http\Message\RequestInterface;
 
 /**
  * Models a service for retrieving a WebResourceInterface given a RequestInterface instance.
- *
- * This adds a reliability layer on top of an http client providing:
- * - content-type verification
- * - additional retry mechanisms based on observed real-world web page issues
  */
 interface RetrieverInterface
 {
@@ -20,23 +16,17 @@ interface RetrieverInterface
      *
      * @param string[] $allowedContentTypes
      */
-    public function setAllowedContentTypes($allowedContentTypes);
+    public function setAllowedContentTypes($allowedContentTypes = []);
 
     /**
      * Whether to allow resources of unknown content types to be retrieved.
      *
      * An implementation MUST default this to true.
      *
+     * @param bool $allowUnknownResourceTypes
      * @return bool
      */
-    public function setAllowUnknownResourceTypes();
-
-    /**
-     * Whether to retry a failed request with an equivalent URL that is not encoded.
-     *
-     * @return bool
-     */
-    public function setRetryWithUrlEncodingDisabled();
+    public function setAllowUnknownResourceTypes($allowUnknownResourceTypes = true);
 
     /**
      * @param RequestInterface $request

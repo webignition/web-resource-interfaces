@@ -98,4 +98,14 @@ interface WebResourceInterface
      * @return bool
      */
     public static function models(InternetMediaTypeInterface $mediaType);
+
+    /**
+     * Gets a collection of content type strings that this implementation models
+     *
+     * Special cases:
+     * - empty array: all
+     *
+     * @return string[]
+     */
+    public static function getModelledContentTypeStrings();
 }

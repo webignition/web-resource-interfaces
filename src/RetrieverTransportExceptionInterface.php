@@ -8,8 +8,5 @@ namespace webignition\WebResourceInterfaces;
  */
 interface RetrieverTransportExceptionInterface extends RetrieverExceptionInterface
 {
-    /**
-     * @return int
-     */
-    public function getTransportErrorCode();
+    public function getTransportErrorCode(): int;
 }

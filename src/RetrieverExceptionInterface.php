@@ -9,8 +9,5 @@ use Psr\Http\Message\RequestInterface;
  */
 interface RetrieverExceptionInterface
 {
-    /**
-     * @return RequestInterface
-     */
-    public function getRequest();
+    public function getRequest(): ?RequestInterface;
 }

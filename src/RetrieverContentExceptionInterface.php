@@ -13,5 +13,5 @@ interface RetrieverContentExceptionInterface extends RetrieverExceptionInterface
     /**
      * @return ResponseInterface|null
      */
-    public function getResponse();
+    public function getResponse(): ?ResponseInterface;
 }

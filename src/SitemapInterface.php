@@ -15,35 +15,35 @@ interface SitemapInterface extends WebResourceInterface
      *
      * @param string $type
      */
-    public function setType($type);
+    public function setType(string $type);
 
     /**
      * Gets the type of this instance.
      *
      * @return string
      */
-    public function getType();
+    public function getType(): string;
 
     /**
      * Is this instance an index sitemap?
      *
      * @return bool
      */
-    public function isIndex();
+    public function isIndex(): bool;
 
     /**
      * Is this instance a sitemap?
      *
      * @return bool
      */
-    public function isSitemap();
+    public function isSitemap(): bool;
 
     /**
      * Returns an interable collection of urls found within this instance.
      *
      * @return string[]
      */
-    public function getUrls();
+    public function getUrls(): array;
 
     /**
      * Adds a child sitemap to an index sitemap.
@@ -54,7 +54,7 @@ interface SitemapInterface extends WebResourceInterface
      *
      * @return bool
      */
-    public function addChild(SitemapInterface $sitemap);
+    public function addChild(SitemapInterface $sitemap): bool;
 
     /**
      * Gets an interable collection of SitemapInterface objects that are child sitemaps of an index sitemap.
@@ -63,5 +63,5 @@ interface SitemapInterface extends WebResourceInterface
      *
      * @return SitemapInterface[]
      */
-    public function getChildren();
+    public function getChildren(): array;
 }

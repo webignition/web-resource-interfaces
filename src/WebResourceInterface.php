@@ -25,14 +25,14 @@ interface WebResourceInterface
      *
      * @return WebResourceInterface
      */
-    public function setResponse(ResponseInterface $response);
+    public function setResponse(ResponseInterface $response): WebResourceInterface;
 
     /**
      * Gets the response of the resource.
      *
      * @return ResponseInterface
      */
-    public function getResponse();
+    public function getResponse(): ResponseInterface;
 
     /**
      * Return an instance with the specified uri.
@@ -46,21 +46,21 @@ interface WebResourceInterface
      *
      * @return WebResourceInterface
      */
-    public function setUri(UriInterface $uri);
+    public function setUri(UriInterface $uri): WebResourceInterface;
 
     /**
      * Gets the uri of the resource.
      *
      * @return UriInterface
      */
-    public function getUri();
+    public function getUri(): UriInterface;
 
     /**
      * Gets the media type of the resource.
      *
      * @return InternetMediaTypeInterface
      */
-    public function getContentType();
+    public function getContentType(): InternetMediaTypeInterface;
 
     /**
      * Return an instance with the specified body.
@@ -74,21 +74,21 @@ interface WebResourceInterface
      *
      * @return WebResourceInterface
      */
-    public function setBody(StreamInterface $body);
+    public function setBody(StreamInterface $body): WebResourceInterface;
 
     /**
      * Gets the body of the resource.
      *
      * @return StreamInterface|null
      */
-    public function getBody();
+    public function getBody(): ?StreamInterface;
 
     /**
      * Gets the content of the body of the resource.
      *
      * @return string
      */
-    public function getContent();
+    public function getContent(): string;
 
     /**
      * Does this instance provide a model for a given internet media type?
@@ -97,7 +97,7 @@ interface WebResourceInterface
      *
      * @return bool
      */
-    public static function models(InternetMediaTypeInterface $mediaType);
+    public static function models(InternetMediaTypeInterface $mediaType): bool;
 
     /**
      * Gets a collection of content type strings that this implementation models
@@ -107,5 +107,5 @@ interface WebResourceInterface
      *
      * @return string[]
      */
-    public static function getModelledContentTypeStrings();
+    public static function getModelledContentTypeStrings(): array;
 }

@@ -11,8 +11,5 @@ use webignition\InternetMediaTypeInterface\InternetMediaTypeInterface;
  */
 interface InvalidContentTypeExceptionInterface
 {
-    /**
-     * @return InternetMediaTypeInterface
-     */
-    public function getContentType();
+    public function getContentType(): InternetMediaTypeInterface;
 }

@@ -14,19 +14,19 @@ interface WebPageInterface extends WebResourceInterface
      *
      * @return string|null
      */
-    public function getCharacterSet();
+    public function getCharacterSet(): ?string;
 
     /**
      * Returns the character set found in the document i.e. the body of the WebResourceInterface instance.
      *
      * @return string
      */
-    public function getDocumentCharacterSet();
+    public function getDocumentCharacterSet(): string;
 
     /**
      * Returns the character set found in the ResponseInterface instance.
      *
      * @return string|null
      */
-    public function getResponseCharacterSet();
+    public function getResponseCharacterSet(): ?string;
 }

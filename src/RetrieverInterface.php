@@ -16,7 +16,7 @@ interface RetrieverInterface
      *
      * @param string[] $allowedContentTypes
      */
-    public function setAllowedContentTypes($allowedContentTypes = []);
+    public function setAllowedContentTypes(array $allowedContentTypes = []);
 
     /**
      * Whether to allow resources of unknown content types to be retrieved.
@@ -24,9 +24,8 @@ interface RetrieverInterface
      * An implementation MUST default this to true.
      *
      * @param bool $allowUnknownResourceTypes
-     * @return bool
      */
-    public function setAllowUnknownResourceTypes($allowUnknownResourceTypes = true);
+    public function setAllowUnknownResourceTypes(bool $allowUnknownResourceTypes = true);
 
     /**
      * @param RequestInterface $request
@@ -42,5 +41,5 @@ interface RetrieverInterface
      * @throws RetrieverExceptionInterface for cases where a resource could not be retrieved
      * @throws InvalidContentTypeExceptionInterface for cases where the retrieved resource content type is not allowed
      */
-    public function retrieve(RequestInterface $request);
+    public function retrieve(RequestInterface $request): WebResourceInterface;
 }

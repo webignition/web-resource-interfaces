@@ -32,7 +32,7 @@ interface WebResourceInterface
      *
      * @return ResponseInterface
      */
-    public function getResponse(): ResponseInterface;
+    public function getResponse(): ?ResponseInterface;
 
     /**
      * Return an instance with the specified uri.

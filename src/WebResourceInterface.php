@@ -32,6 +32,13 @@ interface WebResourceInterface
     public function getUri(): ?UriInterface;
 
     /**
+     * @param InternetMediaTypeInterface $internetMediaType
+     *
+     * @return WebResourceInterface
+     */
+    public function setContentType(InternetMediaTypeInterface $internetMediaType);
+
+    /**
      * Gets the media type of the resource.
      *
      * @return InternetMediaTypeInterface
@@ -55,7 +62,7 @@ interface WebResourceInterface
      *
      * @return string
      */
-    public function getContent(): string;
+    public function getContent(): ?string;
 
     /**
      * Does this instance provide a model for a given internet media type?

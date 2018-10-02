@@ -9,7 +9,7 @@ use Psr\Http\Message\StreamInterface;
  * Models a web-based resource by providing access to commonly-used aspects
  * of a PSR-7 HTTP response
  */
-interface ResponseResourceInterface
+interface ResponseResourceInterface extends WebResourceInterface
 {
     /**
      * Return an instance with the specified response.
@@ -21,9 +21,9 @@ interface ResponseResourceInterface
      *
      * @param ResponseInterface $response
      *
-     * @return WebResourceInterface
+     * @return ResponseResourceInterface
      */
-    public function setResponse(ResponseInterface $response): WebResourceInterface;
+    public function setResponse(ResponseInterface $response): ResponseResourceInterface;
 
     /**
      * Gets the response of the resource.
@@ -42,9 +42,9 @@ interface ResponseResourceInterface
      * This method MUST be implemented in such a way as to retain the immutability of the resource,
      * and MUST return a new instance that has the new body.
      *
-     * @return WebResourceInterface
+     * @return ResponseResourceInterface
      */
-    public function setBody(StreamInterface $body): WebResourceInterface;
+    public function setBody(StreamInterface $body): ResponseResourceInterface;
 
     /**
      * Gets the body of the resource.

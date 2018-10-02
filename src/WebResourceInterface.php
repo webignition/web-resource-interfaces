@@ -60,7 +60,7 @@ interface WebResourceInterface
      *
      * @return InternetMediaTypeInterface
      */
-    public function getContentType(): InternetMediaTypeInterface;
+    public function getContentType(): ?InternetMediaTypeInterface;
 
     /**
      * Return an instance with the specified body.

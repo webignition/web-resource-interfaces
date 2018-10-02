@@ -12,5 +12,5 @@ interface WebPageInterface extends WebResourceInterface
      *
      * @return string
      */
-    public function getCharacterSet(): string;
+    public function getCharacterSet(): ?string;
 }

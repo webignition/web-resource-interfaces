@@ -5,7 +5,7 @@ namespace webignition\WebResourceInterfaces;
 use Psr\Http\Message\RequestInterface;
 
 /**
- * Models a service for retrieving a WebResourceInterface given a RequestInterface instance.
+ * Models a service for retrieving a ResponseResourceInterface given a RequestInterface instance.
  */
 interface RetrieverInterface
 {
@@ -30,7 +30,7 @@ interface RetrieverInterface
     /**
      * @param RequestInterface $request
      *
-     * @return WebResourceInterface
+     * @return ResponseResourceInterface
      *
      * A RetrieverExceptionInterface instance MUST be thrown when a resource
      * is retrieved with a status code other than 200.
@@ -41,5 +41,5 @@ interface RetrieverInterface
      * @throws RetrieverExceptionInterface for cases where a resource could not be retrieved
      * @throws InvalidContentTypeExceptionInterface for cases where the retrieved resource content type is not allowed
      */
-    public function retrieve(RequestInterface $request): WebResourceInterface;
+    public function retrieve(RequestInterface $request): ResponseResourceInterface;
 }

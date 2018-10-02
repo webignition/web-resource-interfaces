@@ -2,38 +2,14 @@
 
 namespace webignition\WebResourceInterfaces;
 
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UriInterface;
 use webignition\InternetMediaTypeInterface\InternetMediaTypeInterface;
 
 /**
- * Models a web-based resource by providing access to commonly-used aspects
- * of a PSR-7 HTTP response
+ * Models a resource retrieved from a HTTP source.
  */
 interface WebResourceInterface
 {
-    /**
-     * Return an instance with the specified response.
-     *
-     * The response MUST be a ResponseInterface object.
-     *
-     * This method MUST be implemented in such a way as to retain the immutability of the resource,
-     * and MUST return a new instance that has the new response.
-     *
-     * @param ResponseInterface $response
-     *
-     * @return WebResourceInterface
-     */
-    public function setResponse(ResponseInterface $response): WebResourceInterface;
-
-    /**
-     * Gets the response of the resource.
-     *
-     * @return ResponseInterface
-     */
-    public function getResponse(): ?ResponseInterface;
-
     /**
      * Return an instance with the specified uri.
      *
@@ -63,28 +39,19 @@ interface WebResourceInterface
     public function getContentType(): ?InternetMediaTypeInterface;
 
     /**
-     * Return an instance with the specified body.
-     *
-     * The body MUST be a StreamInterface object.
-     *
-     * @param StreamInterface $body
+     * Return an instance with the specified content.
      *
      * This method MUST be implemented in such a way as to retain the immutability of the resource,
-     * and MUST return a new instance that has the new body.
+     * and MUST return a new instance that has the new content.
+     *
+     * @param string $content
      *
      * @return WebResourceInterface
      */
-    public function setBody(StreamInterface $body): WebResourceInterface;
+    public function setContent(string $content);
 
     /**
-     * Gets the body of the resource.
-     *
-     * @return StreamInterface|null
-     */
-    public function getBody(): ?StreamInterface;
-
-    /**
-     * Gets the content of the body of the resource.
+     * Gets the content of the resource.
      *
      * @return string
      */

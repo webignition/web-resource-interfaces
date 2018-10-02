@@ -32,6 +32,13 @@ interface WebResourceInterface
     public function getUri(): ?UriInterface;
 
     /**
+     * @param InternetMediaTypeInterface $internetMediaType
+     *
+     * @return WebResourceInterface
+     */
+    public function setContentType(InternetMediaTypeInterface $internetMediaType);
+
+    /**
      * Gets the media type of the resource.
      *
      * @return InternetMediaTypeInterface

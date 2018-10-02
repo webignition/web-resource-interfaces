@@ -62,7 +62,7 @@ interface WebResourceInterface
      *
      * @return string
      */
-    public function getContent(): string;
+    public function getContent(): ?string;
 
     /**
      * Does this instance provide a model for a given internet media type?

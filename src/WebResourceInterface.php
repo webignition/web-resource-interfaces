@@ -53,7 +53,7 @@ interface WebResourceInterface
      *
      * @return UriInterface
      */
-    public function getUri(): UriInterface;
+    public function getUri(): ?UriInterface;
 
     /**
      * Gets the media type of the resource.

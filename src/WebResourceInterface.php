@@ -48,6 +48,13 @@ interface WebResourceInterface
     public function getContentType(): ?InternetMediaTypeInterface;
 
     /**
+     * Does this resource have an invalid content type?
+     *
+     * @return bool
+     */
+    public function hasInvalidContentType(): bool;
+
+    /**
      * Return an instance with the specified content.
      *
      * This method MUST be implemented in such a way as to retain the immutability of the resource,

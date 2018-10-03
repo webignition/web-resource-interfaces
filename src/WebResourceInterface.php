@@ -76,9 +76,9 @@ interface WebResourceInterface
      *
      * @param ResponseInterface $response
      *
-     * @return ResponseResourceInterface
+     * @return WebResourceInterface
      */
-    public function setResponse(ResponseInterface $response): ResponseResourceInterface;
+    public function setResponse(ResponseInterface $response): WebResourceInterface;
 
     /**
      * Gets the response of the resource.
@@ -97,9 +97,9 @@ interface WebResourceInterface
      * This method MUST be implemented in such a way as to retain the immutability of the resource,
      * and MUST return a new instance that has the new body.
      *
-     * @return ResponseResourceInterface
+     * @return WebResourceInterface
      */
-    public function setBody(StreamInterface $body): ResponseResourceInterface;
+    public function setBody(StreamInterface $body): WebResourceInterface;
 
     /**
      * Gets the body of the resource.

@@ -95,27 +95,6 @@ interface WebResourceInterface
     public function getResponse(): ?ResponseInterface;
 
     /**
-     * Return an instance with the specified body.
-     *
-     * The body MUST be a StreamInterface object.
-     *
-     * @param StreamInterface $body
-     *
-     * This method MUST be implemented in such a way as to retain the immutability of the resource,
-     * and MUST return a new instance that has the new body.
-     *
-     * @return WebResourceInterface
-     */
-    public function setBody(StreamInterface $body): WebResourceInterface;
-
-    /**
-     * Gets the body of the resource.
-     *
-     * @return StreamInterface|null
-     */
-    public function getBody(): ?StreamInterface;
-
-    /**
      * Does this instance provide a model for a given internet media type?
      *
      * @param InternetMediaTypeInterface $mediaType

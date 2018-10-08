@@ -11,14 +11,7 @@ interface SitemapInterface extends WebResourceInterface
     const TYPE_SITEMAPS_ORG_XML_INDEX = 'sitemaps.org.xml.index';
 
     /**
-     * Sets the type, one of TYPE_* constants.
-     *
-     * @param string $type
-     */
-    public function setType(string $type);
-
-    /**
-     * Gets the type of this instance.
+     * Gets the type of this instance. One of TYPE_* constants.
      *
      * @return string
      */

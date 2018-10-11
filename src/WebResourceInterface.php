@@ -6,6 +6,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UriInterface;
 use webignition\InternetMediaTypeInterface\InternetMediaTypeInterface;
+use webignition\StreamFactoryInterface\StreamFactoryInterface;
 
 /**
  * Models a resource retrieved from a HTTP source.
@@ -61,10 +62,17 @@ interface WebResourceInterface
      * and MUST return a new instance that has the new content.
      *
      * @param string $content
+     * @param StreamFactoryInterface|null $streamFactory
+     *
+     * If setting the content of a resource without a response, only the first argument is required.
+     *
+     * If setting the content of a resource with a response, a StreamFactoryInterface implementation must be
+     * passed as the second argument. The StreamFactoryInterface instance is responsible for creating a
+     * StreamInterface instance to be set as the response body.
      *
      * @return WebResourceInterface
      */
-    public function setContent(string $content);
+    public function setContent(string $content, ?StreamFactoryInterface $streamFactory = null);
 
     /**
      * Gets the content of the resource.
